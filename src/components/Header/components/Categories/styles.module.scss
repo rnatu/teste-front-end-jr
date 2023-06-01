@@ -1,0 +1,30 @@
+.categoriesNav {
+  width: 100%;
+  padding: 0 3.5rem;
+  margin-top: 10px;
+
+  ul {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    list-style-type: none;
+
+    li {
+      display: flex;
+      gap: .75rem;
+      align-items: center;
+
+      p.highlighted {
+        color: var(--pink);
+      }
+      
+      p {
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        font-weight: 600;
+      }
+    }
+  }
+}

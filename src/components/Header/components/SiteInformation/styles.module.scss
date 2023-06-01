@@ -1,0 +1,24 @@
+.siteInformationContainer {
+  margin: 0 auto;
+  max-width: 47.75rem;
+
+  display: flex;
+
+  justify-content: space-between;
+  padding: 6px 0;
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 0.5625rem;
+  }
+
+  p {
+    font-size: 0.75rem;
+
+    span {
+      color: var(--pink);
+      font-weight: 600;
+    }
+  }
+}

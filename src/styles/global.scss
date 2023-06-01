@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+:root {
+  --white: "#ffffff";
+  --white-2: #f6f5f2;
+  --white-3: #f4f4f4;
+  --white-4: #f0f0f0;
+  --white-5: #f7f5f2;
+  --white-6: #c0c0c0;
+
+  --pink: #f71963;
+  --pink-2: #ab3159;
+
+  --gray-1: #9f9f9f;
+  --gray-2: #3b3b3b;
+  --gray-3: #4e4e4e;
+  --gray-4: #808080;
+  --gray-5: #3f3f40;
+  --gray-6: #bdbdbd;
+  --gray-7: #dedede;
+
+  --black: #000000;
+  --black-2: #2a2a2a;
+  --black-3: #222222;
+  --black-4: #1e1e1e;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--gray-1);
+
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+input,
+textarea,
+button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+button {
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 p,
+span {
+  line-height: 130%;
+}
+
+:focus {
+  outline: 0;
+  box-shadow: 0 0 0 2px var(--pink);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--pink);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2rem;
+  background: var(--pink);
+}

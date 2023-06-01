@@ -1,0 +1,56 @@
+.UserActionsContainer {
+  width: 100%;
+  padding: 0.75rem 3.5rem;
+
+  display: flex;
+  align-items: center;
+
+  > img {
+    margin-right: 5.9375rem;
+  }
+}
+
+.searchBar {
+  flex: 1;
+  margin-right: 3.8125rem;
+
+  display: flex;
+  align-items: center;
+  background-color: var(--white-2);
+  padding: 0.625rem 1rem 0.625rem 1.5rem;
+  max-width: 41.0625rem;
+
+  border-radius: 10px;
+
+  input {
+    flex: 1;
+    border: none;
+    background-color: transparent;
+
+    &::placeholder {
+      font-weight: 500;
+      font-size: 0.875rem;
+    }
+  }
+
+  button {
+    background: transparent;
+    border: none;
+  }
+}
+
+.userActionsNav {
+  ul {
+    display: flex;
+    list-style-type: none;
+    gap: 2rem;
+    align-items: center;
+
+    li {
+      a {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}

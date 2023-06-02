@@ -1,12 +1,24 @@
 import { ProductFilterCard } from './components/ProductFilterCard';
+import { categoryFilterItems } from './categoryFilterItems';
+import styles from './styles.module.scss';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/scss';
 
 export function ProductFilter() {
   return (
-    <>
-      <ProductFilterCard />
-      <ProductFilterCard />
-      <ProductFilterCard />
-      <ProductFilterCard />
-    </>
+    <section className={styles.ProductFilterContainer}>
+      <Swiper slidesPerView={7} spaceBetween={53}>
+        {categoryFilterItems.map((product) => (
+          <SwiperSlide key={product.name}>
+            <ProductFilterCard
+              icon={product.icon}
+              active={product.active}
+              text={product.name}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </section>
   );
 }

@@ -1,15 +1,27 @@
 import styles from './styles.module.scss';
 
-import differentScreens from '../../../../assets/images/icons/different-screens.svg';
+interface ProductFilterCardProps {
+  active?: boolean;
+  icon: string;
+  text: string;
+}
 
-export function ProductFilterCard() {
+export function ProductFilterCard({
+  active = false,
+  icon,
+  text,
+}: ProductFilterCardProps) {
   return (
-    <div className={styles.ProductFilterCardContainer}>
+    <div
+      className={`${styles.ProductFilterCardContainer} ${
+        active && styles.active
+      }`}
+    >
       <div>
-        <img src={differentScreens} alt="" style={{ fill: 'red' }} />
+        <img src={icon} alt="" />
       </div>
 
-      <p>Tecnologia</p>
+      <p>{text}</p>
     </div>
   );
 }

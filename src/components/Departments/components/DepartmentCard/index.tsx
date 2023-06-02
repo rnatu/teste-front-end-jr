@@ -6,16 +6,14 @@ interface ProductFilterCardProps {
   text: string;
 }
 
-export function ProductFilterCard({
+export function DepartmentCard({
   active = false,
   icon,
   text,
 }: ProductFilterCardProps) {
   return (
     <div
-      className={`${styles.ProductFilterCardContainer} ${
-        active && styles.active
-      }`}
+      className={`${styles.DepartmentCardContainer} ${active && styles.active}`}
     >
       <div>
         <img src={icon} alt="" />

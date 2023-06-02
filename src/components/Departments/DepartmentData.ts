@@ -9,7 +9,7 @@ import market from '../../assets/images/icons/market.svg';
 import bakery from '../../assets/images/icons/bakery.svg';
 import oriental from '../../assets/images/icons/oriental.svg';
 
-export const categoryFilterItems = [
+export const DepartmentData = [
   {
     name: 'Tecnologia',
     icon: differentScreens,

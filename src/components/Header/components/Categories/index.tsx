@@ -6,26 +6,40 @@ export function Categories() {
     <nav className={styles.categoriesNav}>
       <ul>
         <li>
-          <p>Toda Categorias</p>
+          <a href="/">
+            <p>Toda Categorias</p>
+          </a>
         </li>
         <li>
-          <p>Supermercado</p>
+          <a href="/">
+            <p>Supermercado</p>
+          </a>
         </li>
         <li>
-          <p>Livros</p>
+          <a href="/">
+            <p>Livros</p>
+          </a>
         </li>
         <li>
-          <p>Moda</p>
+          <a href="/">
+            <p>Moda</p>
+          </a>
         </li>
         <li>
-          <p>Lançamentos</p>
+          <a href="/">
+            <p>Lançamentos</p>
+          </a>
         </li>
         <li>
-          <p className={styles.highlighted}>Ofertas do Dia</p>
+          <a href="/">
+            <p className={styles.highlighted}>Ofertas do Dia</p>
+          </a>
         </li>
         <li>
           <img src={crown} alt="" />
-          <p>Assinatura</p>
+          <a href="/">
+            <p>Assinatura</p>
+          </a>
         </li>
       </ul>
     </nav>

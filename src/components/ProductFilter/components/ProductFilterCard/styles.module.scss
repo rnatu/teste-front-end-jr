@@ -9,14 +9,15 @@
     display: flex;
 
     justify-content: center;
-    align-items: center;
+    align-items: 0.9375rem;
+
+    margin: 0 0.9375rem;
 
     img {
       padding: 2.125rem;
-     
     }
   }
-  
+
   p {
     margin-top: 1.375rem;
     text-align: center;
@@ -29,5 +30,3 @@
     }
   }
 }
-
-

@@ -1,0 +1,28 @@
+.tableContainer {
+  margin: 4px auto 17px;
+  max-width: 82rem;
+  padding: 0 3rem;
+
+  table {
+    width: 100%;
+
+    border: 1px solid var(--gray-6);
+    table-layout: fixed;
+  }
+
+  td {
+    width: auto;
+    border-right: 1px solid var(--gray-6);
+    text-align: center;
+
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: var(--gray-2);
+    }
+  }
+
+  td:last-child {
+    border-right: none;
+  }
+}

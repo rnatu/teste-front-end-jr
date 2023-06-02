@@ -1,0 +1,28 @@
+.relatedProductsContainer {
+
+}
+
+.headerTitle {
+  display: flex;
+  gap: 2.125rem;
+
+  align-items: center;
+  max-width: 73rem;
+  padding: 0 3rem;
+  margin: 0 auto;
+
+  h1 {
+    flex: 1;
+    font-size: 1.875rem;
+    min-width: fit-content;
+
+    color: var(--pink);
+  }
+
+  div {
+    width: 100%;
+    border: 1px solid var(--gray-7);
+  }
+}
+
+

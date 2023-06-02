@@ -8,7 +8,7 @@ import 'swiper/scss';
 export function ProductFilter() {
   return (
     <section className={styles.ProductFilterContainer}>
-      <Swiper slidesPerView={7} spaceBetween={53}>
+      <Swiper slidesPerView={7} spaceBetween={25}>
         {categoryFilterItems.map((product) => (
           <SwiperSlide key={product.name}>
             <ProductFilterCard

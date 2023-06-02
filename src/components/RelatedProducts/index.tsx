@@ -1,4 +1,5 @@
 import { RelatedCategories } from '../RelatedCategories';
+import { ProductSlider } from './components/ProductSlider';
 import styles from './styles.module.scss';
 
 export function RelatedProducts() {
@@ -12,6 +13,8 @@ export function RelatedProducts() {
         </div>
 
         <RelatedCategories />
+
+        <ProductSlider />
       </header>
     </section>
   );

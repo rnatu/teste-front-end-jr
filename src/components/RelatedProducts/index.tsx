@@ -1,21 +1,25 @@
-import { RelatedCategories } from '../RelatedCategories';
+import { ReactNode } from 'react';
 import { ProductSlider } from './components/ProductSlider';
 import styles from './styles.module.scss';
 
-export function RelatedProducts() {
+interface RelatedProductsProps {
+  children: ReactNode;
+}
+
+export function RelatedProducts({ children }: RelatedProductsProps) {
   return (
     <section className={styles.relatedProductsContainer}>
       <header>
         <div className={styles.headerTitle}>
           <div />
-          <h1>Produtos relacionados</h1>
+          <h1>Related Products</h1>
           <div />
         </div>
 
-        <RelatedCategories />
-
-        <ProductSlider />
+        <div>{children}</div>
       </header>
+
+      <ProductSlider />
     </section>
   );
 }

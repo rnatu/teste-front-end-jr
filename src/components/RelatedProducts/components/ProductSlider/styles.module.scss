@@ -1,7 +1,9 @@
 .productSliderContainer {
   display: flex;
   align-items: center;
-  max-width: 1389px;
+  max-width: 86.8125rem;
+
+  width: fit-content;
   gap: 2.1875rem;
 
   button {
@@ -10,19 +12,20 @@
   }
 }
 
-.swiperContainer {
-  max-width: 1266px;
-  width: 100%;
-
-}
-
 .cardContainer {
-  max-width: 270px;
+  max-width: 16.875rem;
   padding: 1.0625rem 0.75rem 1rem 0.6875rem;
 
   box-shadow: 0px 3px 19px rgba(0, 0, 0, 0.22);
   border-radius: 10px;
-  margin: 10px;
+  margin: .625rem;
+
+  div {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
 }
 
 .cardContent {
@@ -49,12 +52,13 @@
   }
 
   small {
-    font-size: 12px;
+    font-size: .75rem;
     color: var(--gray-5);
   }
 
   span:last-of-type {
     color: var(--pink);
+    margin-top: .4375rem;
   }
 
   button {
@@ -63,9 +67,9 @@
     border: none;
     border-radius: 4px;
     padding: 0.88rem 1rem 0.715rem;
-    margin-top: 12px;
+    margin-top: .75rem;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 700;
   }
 }

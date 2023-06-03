@@ -5,98 +5,56 @@ import styles from './styles.module.scss';
 
 import arrowLeft from '../../../../assets/images/icons/arrow-left.svg';
 import arrowRight from '../../../../assets/images/icons/arrow-right.svg';
-
-const produtsTest = [
-  {
-    productName: 'Iphone 11 PRO MAX BRANCO 1',
-    descriptionShort: 'Iphone 11 PRO MAX BRANCO 1',
-    photo:
-      'https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png',
-    price: 15000,
-  },
-  {
-    productName: 'IPHONE 13 MINI 1',
-    descriptionShort: 'IPHONE 13 MINI 1',
-    photo:
-      'https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png',
-    price: 9000,
-  },
-  {
-    productName: 'Iphone 11 PRO MAX BRANCO 2',
-    descriptionShort: 'Iphone 11 PRO MAX BRANCO 2',
-    photo:
-      'https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png',
-    price: 14990,
-  },
-  {
-    productName: 'IPHONE 13 MINI 2',
-    descriptionShort: 'IPHONE 13 MINI 2',
-    photo:
-      'https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png',
-    price: 12000,
-  },
-  {
-    productName: 'Iphone 11 PRO MAX BRANCO 3',
-    descriptionShort: 'Iphone 11 PRO MAX BRANCO 3',
-    photo:
-      'https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png',
-    price: 4550,
-  },
-  {
-    productName: 'IPHONE 13 MINI 3',
-    descriptionShort: 'IPHONE 13 MINI 3',
-    photo:
-      'https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png',
-    price: 38000,
-  },
-  {
-    productName: 'Iphone 11 PRO MAX BRANCO 4',
-    descriptionShort: 'Iphone 11 PRO MAX BRANCO 4',
-    photo:
-      'https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png',
-    price: 42000,
-  },
-  {
-    productName: 'IPHONE 13 MINI 4',
-    descriptionShort: 'IPHONE 13 MINI 4',
-    photo:
-      'https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png',
-    price: 520,
-  },
-  {
-    productName: 'Iphone 11 PRO MAX BRANCO 5',
-    descriptionShort: 'Iphone 11 PRO MAX BRANCO 5',
-    photo:
-      'https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png',
-    price: 149990,
-  },
-  {
-    productName: 'IPHONE 13 MINI 5',
-    descriptionShort: 'IPHONE 13 MINI 5',
-    photo:
-      'https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png',
-    price: 100000,
-  },
-];
+import { useEffect, useState } from 'react';
+import { Product } from '../../../../types/product';
+import Modal from '../../../Modal';
+import { formatCurrency } from '../../../../utils/formatCurrency';
 
 export function ProductSlider() {
-  return (
-    <section className={styles.productSliderContainer}>
-      <button className="btn-left">
-        <img src={arrowLeft} alt="Mover itens para a esquerda" />
-      </button>
+  const [products, setProducts] = useState<Product[]>([]);
+  const [modalProduct, setModalProduct] = useState<Product>({} as Product);
+  const [showModal, setShowModal] = useState<boolean>(false);
 
-      <div className={styles.swiperContainer}>
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          'https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json',
+        );
+        const { products } = await response.json();
+
+        setProducts([...products]);
+      } catch (error) {
+        console.error('Erro:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  function handleClick(product: Product) {
+    setModalProduct(product);
+    setShowModal(true);
+  }
+
+  return (
+    <>
+      <section className={styles.productSliderContainer}>
+        <button className="btn-left">
+          <img src={arrowLeft} alt="Mover itens para a esquerda" />
+        </button>
+
         <Swiper
+          className={styles.swiperContainer}
           modules={[Navigation]}
-          spaceBetween={40}
+          spaceBetween={16}
           slidesPerView={4}
           navigation={{
             prevEl: '.btn-left',
             nextEl: '.btn-right',
           }}
         >
-          {produtsTest.map((product, index) => (
+          {products.map((product, index) => (
             <SwiperSlide key={index}>
               <div className={styles.cardContainer}>
                 <div>
@@ -108,21 +66,35 @@ export function ProductSlider() {
                 </div>
                 <div className={styles.cardContent}>
                   <p>{product.productName}</p>
-                  <span className="oldPrice">R$ {product.price}</span>
-                  <strong>R$ {product.price}</strong>
-                  <small>ou 2x de {product.price} sem juros</small>
+                  <span className="oldPrice">
+                    {formatCurrency(product.price)}
+                  </span>
+                  <strong>{formatCurrency(product.price)}</strong>
+                  <small>
+                    ou 2x de {formatCurrency(product.price)} sem juros
+                  </small>
                   <span className="deliveryCondition">Frete grátis</span>
-                  <button type="button">Comprar</button>
+                  <button type="button" onClick={() => handleClick(product)}>
+                    Comprar
+                  </button>
                 </div>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
 
-      <button className="btn-right">
-        <img src={arrowRight} alt="Move itens para a direita" />
-      </button>
-    </section>
+        <button className="btn-right">
+          <img src={arrowRight} alt="Move itens para a direita" />
+        </button>
+      </section>
+
+      {showModal && (
+        <Modal
+          showModal={showModal}
+          setShowModal={setShowModal}
+          modalProduct={modalProduct}
+        />
+      )}
+    </>
   );
 }

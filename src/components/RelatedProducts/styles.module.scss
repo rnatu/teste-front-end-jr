@@ -1,19 +1,22 @@
 .relatedProductsContainer {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .headerTitle {
   display: flex;
+  max-width: 73rem;
+  width: 100%;
+
   gap: 2.125rem;
 
   align-items: center;
-  max-width: 73rem;
   padding: 0 3rem;
-  margin: 0 auto;
+  margin: 2.4375rem auto 0.625rem;
 
   h1 {
-    flex: 1;
+    width: 100%;
     font-size: 1.875rem;
     min-width: fit-content;
 
@@ -25,5 +28,3 @@
     border: 1px solid var(--gray-7);
   }
 }
-
-

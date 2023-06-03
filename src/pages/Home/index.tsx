@@ -13,6 +13,10 @@ export function Home() {
       <RelatedProducts>
         <RelatedCategories />
       </RelatedProducts>
+      <RelatedProducts>
+        {/* <RelatedCategories /> */}
+        <a href="/">Ver todos</a>
+      </RelatedProducts>
     </>
   );
 }

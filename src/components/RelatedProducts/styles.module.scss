@@ -2,6 +2,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    div > a {
+      font-size: .9375rem;
+      color: var(--gray-5);
+      display: block;
+      margin-bottom: 2rem;
+      text-decoration: none;
+      font-weight: 700;
+    }
+  }
 }
 
 .headerTitle {

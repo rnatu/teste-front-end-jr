@@ -1,0 +1,77 @@
+.partnerGroupContainer {
+  display: flex;
+  gap: 6.5794rem;
+
+  max-width: 79.3125rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4.4375rem;
+
+  > div {
+    width: 100%;
+    position: relative;
+    background-image: url("../../assets/images/partner-photo.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 2.5rem;
+
+    .partnerGroupMask {
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 85.04%);
+      mix-blend-mode: normal;
+      opacity: 0.8;
+      border-radius: 0px;
+    }
+  }
+
+  .partnerGroupContent {
+    position: relative;
+    z-index: 2;
+
+    h1 {
+      margin-top: 85px;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    p {
+      margin-top: 0.5rem;
+      max-width: 11.3125rem;
+      color: var(--white);
+    }
+
+    button {
+      margin-top: 2rem;
+      border: none;
+      border-radius: 10px;
+      padding: 0.75rem 1.5rem;
+
+      background-color: var(--pink);
+      color: var(--white);
+      letter-spacing: 8%;
+
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+  }
+
+  &.variant {
+    h1 {
+      margin-top: 5px;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+  }
+}

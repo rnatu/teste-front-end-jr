@@ -1,0 +1,48 @@
+.footerContainer {
+  background-color: var(--black-2);
+  margin-top: 10.5625rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.userInfo {
+  width: 100%;
+  padding-top: 33px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.interactionContainer {
+  display: flex;
+}
+
+.sectionWrap {
+  margin-top: 30px;
+  border-top: 1px solid var(--white);
+}
+
+.legalInformation {
+  display: flex;
+  width: 100%;
+
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 1.1875rem 0;
+
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    max-width: 43.625rem;
+    font-size: 0.625rem;
+    color: var(--white);
+  }
+
+  div {
+    display: flex;
+    gap: 2rem;
+  }
+}

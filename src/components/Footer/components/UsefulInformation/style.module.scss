@@ -1,0 +1,25 @@
+.usefulInformationContainer {
+  height: 14.75rem;
+  margin-left: 5.8125rem;
+
+  h3 {
+    color: var(--white);
+    font-size: 0.8125rem;
+    font-weight: 700;
+  }
+}
+
+.informationAnchors {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 0.75rem;
+    font-weight: 300;
+    line-height: 2rem;
+  }
+}

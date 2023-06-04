@@ -6,6 +6,7 @@ import { RelatedCategories } from '../../components/RelatedCategories';
 import { PartnerGroup } from '../../components/PartnerGroup';
 import style from './styles.module.scss';
 import { Brands } from '../../components/Brands';
+import { Footer } from '../../components/Footer';
 
 export function Home() {
   return (
@@ -35,6 +36,8 @@ export function Home() {
           <a href="/">Ver todos</a>
         </RelatedProducts>
       </main>
+
+      <Footer />
     </>
   );
 }

@@ -1,0 +1,25 @@
+.paymentMethodContainer {
+  width: 12.1875rem;
+  height: 12.0344rem;
+  margin-left: 2.9375rem;
+
+  h3 {
+    color: var(--white);
+    font-size: 0.8125rem;
+    font-weight: 700;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.paymentMethodContent {
+  margin-top: 1.5rem;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 0.9375rem;
+}

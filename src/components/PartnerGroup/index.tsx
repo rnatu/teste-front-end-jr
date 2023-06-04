@@ -12,7 +12,7 @@ export function PartnerGroup({ variant = false }: PartnerGroupProps) {
       <div>
         <div className={style.partnerGroupMask} />
         <div className={style.partnerGroupContent}>
-          <h1>Parceiros</h1>
+          {variant ? <h1>Produtos</h1> : <h1>Parceiros</h1>}
           <p>Lorem ipsum dolor sit amet, consectetur</p>
           <button>Confira</button>
         </div>

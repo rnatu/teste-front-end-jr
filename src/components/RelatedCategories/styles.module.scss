@@ -1,5 +1,5 @@
 .tableContainer {
-  margin: .25rem auto 1.0625rem;
+  margin: 0.25rem auto 1.0625rem;
   max-width: 82rem;
   padding: 0 3rem;
 
@@ -19,6 +19,13 @@
       text-decoration: none;
       text-transform: uppercase;
       color: var(--gray-2);
+    }
+  }
+
+  td:first-child {
+    a {
+      font-weight: 700;
+      color: var(--pink);
     }
   }
 

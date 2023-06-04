@@ -5,6 +5,7 @@ import { RelatedProducts } from '../../components/RelatedProducts';
 import { RelatedCategories } from '../../components/RelatedCategories';
 import { PartnerGroup } from '../../components/PartnerGroup';
 import style from './styles.module.scss';
+import { Brands } from '../../components/Brands';
 
 export function Home() {
   return (
@@ -27,6 +28,12 @@ export function Home() {
         </RelatedProducts>
 
         <PartnerGroup variant />
+
+        <Brands />
+
+        <RelatedProducts>
+          <a href="/">Ver todos</a>
+        </RelatedProducts>
       </main>
     </>
   );
